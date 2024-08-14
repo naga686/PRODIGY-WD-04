@@ -1,0 +1,129 @@
+``html
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header Section -->
+<header>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- Home Section -->
+<section id="home">
+	<h1>Welcome to my portfolio!</h1>
+	<p>This is a brief overview of my skills and experience.</p>
+</section>
+
+<!-- About Section -->
+<section id="about">
+	<h1>About Me</h1>
+	<p>This is a brief bio that includes my education, work experience, and relevant skills.</p>
+</section>
+<!-- Projects Section -->
+<section id="projects">
+	<h1>Projects</h1>
+	<!-- Project 1 -->
+	<div class="project">
+		<h2>Project 1</h2>
+		<p>This is a brief description of Project 1.</p>
+	</div>
+	<!-- Project 2 -->
+	<div class="project">
+		<h2>Project 2</h2>
+		<p>This is a brief description of Project 2.</p>
+	</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h1>Contact Me</h1>
+	<p>This is my contact information.</p>
+</section>
+
+<!-- Footer Section -->
+<footer>
+	<p>&copy; 2023 My Portfolio</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+CSS (in style.css file):
+css
+body {
+    font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+project {
+	background-color: #f7f7f7;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project h2 {
+	margin-top: 0;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+    text-align: center;
+	clear: both;
+}
+
+JavaScript (in script.js file):
+
+// Add event listener to nav links
+document.querySelectorAll('nav a').forEach(link => {
+	link.addEventListener('click', event => {
+		event.preventDefault();
+		document.querySelector(link.getAttribute('href')).scrollIntoView({
+			behavior: 'smooth'
+		});
+	});
+});
+
